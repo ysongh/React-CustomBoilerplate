@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>React Custom Boilerplate</h1>
-      </div>
+      <Router>
+        <div>
+          <h1 className="header">React Custom Boilerplate</h1>
+          <Route exact path="/" component={Home} />
+        </div>
+      </Router>
     );
   }
 }
